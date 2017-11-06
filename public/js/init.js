@@ -7,8 +7,28 @@
 
     let switched = false
 
+    $('#second-quickview').hide(true)
+
+    $('iframe').hide(true)
+    $('#exit-video').hide(true)
+
+
+    function inMouse() {
+        $('#second-quickview').attr('style', 'z-index: 50; position: absolute;')
+        $('#p2').attr('style', '-webkit-filter: blur(3px)')
+    }
+    function outMouse() {
+        $('#second-quickview').hide(true)
+        $('#p2').attr('style', '')
+    }
+    $(".fifty-before").hover(inMouse, outMouse)
+
+
     //small layout
     if ($(window).width() < 768) {
+
+      $('#second-span').attr('style', 'z-index: 50; position: absolute;')
+      $('#second-span').hide(true)
 
       $('#p2').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
       $('#p1').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
@@ -31,11 +51,18 @@
 
       $('.fifty-img-before').attr('style', 'none')
 
+      $('#medium-bottom-large').removeClass('medium-bottom-large')
+
       //switch images
     }
 
     //medium layout
     if ($(window).width() >= 768 && $(window).width() <= 980) {
+
+      $('#second-span').attr('style', 'z-index: 50; position: absolute;')
+      $('#second-span').hide(true)
+
+      $('#medium-bottom-large').addClass('medium-bottom-large')
       // left image
       $('#p2').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
       $('#p1').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
@@ -53,6 +80,8 @@
 
       $("#photo-first").css("max-height", $(".fifty-img-before").height());
 
+      $(".medium-bottom-large").css("max-height", $(".fifty-img-before").height());
+
       //right image
       $('.fifty-right-before').removeClass('photo2')
       $('.fifty-right-before').removeClass('item-left')
@@ -67,7 +96,12 @@
     }
 
     if ($(window).width() > 980) {
+
+      $('#first-span').hide(true)
+
+      $('#medium-bottom-large').removeClass('medium-bottom-large')
       $('.fifty-img-before').attr('style', 'none')
+      $('#photo-first').removeClass('photo-first')
     }
 
 
@@ -75,6 +109,13 @@
 
       //small layout
       if ($(window).width() < 768) {
+
+
+        $('#second-span').attr('style', 'z-index: 50; position: absolute;')
+        $('#second-span').hide(true)
+
+        $('#medium-bottom-large').removeClass('medium-bottom-large')
+
 
         $('#p2').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
         $('#p1').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
@@ -102,12 +143,25 @@
 
       //medium layout
       if ($(window).width() >= 768 && $(window).width() <= 980) {
+        $('#second-span').attr('style', 'z-index: 50; position: absolute;')
+        $('#second-span').hide(true)
 
+        $('#first-span').attr('style', 'z-index: 50; position: absolute;')
+        $('#fist-span').hide(false)
 
+        $(".medium-bottom-large").css("max-height", $(".fifty-img-before").height());
+        $('#medium-bottom-large').addClass('medium-bottom-large')
         $('.fifty-img-before').attr('style', 'margin-left: -100px;')
       }
 
       if ($(window).width() > 980) {
+        $('#second-span').attr('style', 'z-index: 50; position: absolute;')
+
+        $('#first-span').attr('style', 'z-index: 50; position: absolute;')
+        $('#first-span').hide(true)
+
+
+        $('#medium-bottom-large').removeClass('medium-bottom-large')
         $('.fifty-img-before').attr('style', 'none')
       }
 

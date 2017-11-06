@@ -10,8 +10,40 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
+<script type="text/javascript">
+  function showVideo(e) {
+    e.stopPropagation()
+    $('iframe').attr('style', '')
+    $('#exit-video').attr('style', '')
+    $('header').attr('style', '-webkit-filter: blur(3px)')
+    $(".content").attr('style', '-webkit-filter: blur(3px); margin-top: 300px;')
+
+    $('.content').click(function(e) {
+      //close video
+      $('iframe').hide(true)
+      $('#exit-video').hide(true)
+      $('header').attr('style', '')
+      $(".content").attr('style', 'margin-top: 300px;')
+
+    })
+
+    $('header').click(function(e) {
+      //close video
+      $('iframe').hide(true)
+      $('#exit-video').hide(true)
+      $('header').attr('style', '')
+      $(".content").attr('style', 'margin-top: 300px;')
+
+    })
+
+  }
+</script>
+
 <body>
 
+  <iframe src="https://player.vimeo.com/video/238860732" width="640" height="407" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p id='exit-video'>&#10005</p>
 
   <header class="nav-clear" role="navigation">
     <div class="nav-wrapper">
@@ -41,19 +73,21 @@
 
   <div class="content" style="margin-top: 300px;">
     <div id="photo-first" style="overflow: hidden;">
+      <!-- <span id="first-span" style="z-index: 50; position: absolute;">Be a<br>
+        Good Person</span> -->
       <img id='p1' class="photo1" src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4" alt="">
     </div>
     <!-- <div id="overlay">
       <span>Nike <br>
         & Flowers</span>
     </div> -->
-    <div id="" class="photo2 fifty-before">
-      <img id='p2' class="photo2-real fifty-img-before" src="https://i.imgur.com/4IiKnhF.jpg" alt="">
 
-      <!-- <div id="overlay">
-        <span>Nike <br>
-          & Flowers</span>
-      </div> -->
+
+    <div id="" class="photo2 fifty-before">
+      <!-- <span id="second-span" style="z-index: 50; position: absolute;">Be a<br>
+        Good Person</span> -->
+      <span onclick="showVideo(event)" id='second-quickview' style="z-index: 100; position: absolute">&#9658; Quick View</span>
+      <img id='p2' class="photo2-real fifty-img-before" src="https://i.imgur.com/4IiKnhF.jpg" alt="">
     </div>
 
 
@@ -64,7 +98,12 @@
           & Flowers</span>
       </div> -->
     </div>
-    <img class="photo1 item-right photo4" src="https://i.imgur.com/wKSi9T6.jpg" alt="">
+
+    <div class="medium-bottom-large" id="medium-bottom-large">
+      <img class="photo1 item-right photo4" src="https://i.imgur.com/wKSi9T6.jpg" alt="">
+    </div>
+
+
     <div id="fifty">
       <img id='fifty-img' class="" src="" alt="">
       <!-- <div id="overlay">

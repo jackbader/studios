@@ -281,3 +281,43 @@ body {
 .logo-img {
   width: 100%
 }
+
+.medium-bottom-large {
+  float: right !important;
+  position: inherit !important;
+  overflow: hidden;
+}
+
+span {
+  margin: 15px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Circular', sans-serif;
+  font-weight: 400;
+  font-size: 1.555555556em;
+  letter-spacing: 1px;
+}
+
+#second-quickview:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+#exit-video {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  margin-right: 25px;
+  font-size: 25px;
+}
