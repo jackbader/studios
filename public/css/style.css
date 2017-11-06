@@ -1,0 +1,283 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .logo {
+  color: #444;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-clear {
+    /*line-height: 6.4rem;*/
+    position: relative !important;
+  }
+  .my-header {
+    position: relative !important;
+  }
+  .logo {
+    width: 66px;
+    height: 61px;
+  }
+  .intro {
+    display: none;
+  }
+  .right {
+    float: none !important;
+    margin-right: 0px !important;
+    text-align: center !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    margin-top: 0px !important;
+  }
+  #fifty-img {
+    width: 100% !important;
+  }
+  .photo-first {
+    margin-bottom: 5px !important;
+  }
+  #fifty-right {
+    width: 100% !important;
+  }
+  .fifty-before {
+    margin-bottom: 5px !important;
+  }
+  .photo1 {
+    margin-top: 5px !important;
+  }
+
+}
+
+@media only screen and (max-width: 980px) {
+  .photo2 {
+    float: none !important;
+    width: 83% !important;
+  }
+  .photo1 {
+    position: inherit !important;
+    width: 100% !important;
+  }
+  #p1 {
+    margin-top: -45px;
+  }
+  .photo2-real {
+    width: 91% !important;
+    margin-top: auto !important;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+nav ul a:hover {
+   background-color: rgba(0,0,0,0);
+}
+
+.nav-clear {
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  padding-top: 1.6em;
+  padding-bottom: 2.4em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+  font-size: 1.3em;
+  color: white;
+}
+
+.right {
+  margin-right: 50px;
+  margin-top: 0px;
+}
+
+.right a {
+  color: black;
+  font-size: 15px;
+}
+
+.intro {
+  margin-left: 50px;
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto 1.142857143em;
+}
+
+.my-header h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.my-header {
+  z-index: 10;
+  top: 9.0em;
+  position: fixed;
+  font-size: 100%;
+  width: 100%;
+}
+
+.my-header span {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.my-header {
+  position: fixed;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.content {
+  /*margin-top: 300px !important;*/
+  width: 96%;
+  margin: auto;
+}
+
+.content img {
+
+}
+
+.photo1 {
+  width: 41.5%;
+  position: absolute;
+  margin-top: 14px;
+}
+
+.photo2 {
+  width: 55.5%;
+  float: right;
+  left: 600px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.photo-first {
+  /*max-height: 390px;*/
+  float: right;
+  left: 600px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.photo2-real {
+  width: 100%;
+  margin-top: -30px;
+}
+
+.main-container {
+  margin-top: 300px;
+}
+
+.item-right {
+  float: right !important;
+  position: inherit !important;
+}
+
+.item-left {
+  float: left !important;
+}
+
+.photo4 {
+  width: 43.3%
+}
+
+#overlay {
+  z-index: 50;
+  color: white;
+  position: absolute;
+  margin: 25px;
+  font-size: 30px;
+}
+
+#fifty {
+  float: left;
+  width: 49%;
+  overflow: hidden;
+}
+
+#fifty-img {
+  width: 150%;
+}
+
+#fifty-right {
+  float: right;
+  max-height: 398px;
+  width: 49%;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 100%
+}
