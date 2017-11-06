@@ -17,6 +17,19 @@
     //small layout
     if ($(window).width() < 768) {
 
+      $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+      $('#first-quickview').hide(true)
+
+      function inMouse() {
+          $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+          $('#p1').attr('style', '-webkit-filter: blur(3px)')
+      }
+      function outMouse() {
+          $('#first-quickview').hide(true)
+          $('#p1').attr('style', '')
+      }
+      $("#photo-first").hover(inMouse, outMouse)
+
       $('#second-span').attr('style', 'z-index: 50; position: absolute;')
       $('#second-span').hide(true)
 
@@ -124,7 +137,6 @@
 
       //small layout
       if ($(window).width() < 768) {
-
 
         $('#second-span').attr('style', 'z-index: 50; position: absolute;')
         $('#second-span').hide(true)
