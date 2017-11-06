@@ -37,6 +37,15 @@
 
     })
 
+    $('#exit-video').click(function(e) {
+      //close video
+      $('iframe').hide(true)
+      $('#exit-video').hide(true)
+      $('header').attr('style', '')
+      $(".content").attr('style', 'margin-top: 300px;')
+
+    })
+
   }
 </script>
 
@@ -75,6 +84,7 @@
     <div id="photo-first" style="overflow: hidden;">
       <!-- <span id="first-span" style="z-index: 50; position: absolute;">Be a<br>
         Good Person</span> -->
+      <span onclick="showVideo(event)" id='first-quickview' style="z-index: 100; position: absolute;">&#9658; Quick View</span>
       <img id='p1' class="photo1" src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4" alt="">
     </div>
     <!-- <div id="overlay">

@@ -8,20 +8,10 @@
     let switched = false
 
     $('#second-quickview').hide(true)
+    $('#first-quickview').hide(true)
 
     $('iframe').hide(true)
     $('#exit-video').hide(true)
-
-
-    function inMouse() {
-        $('#second-quickview').attr('style', 'z-index: 50; position: absolute;')
-        $('#p2').attr('style', '-webkit-filter: blur(3px)')
-    }
-    function outMouse() {
-        $('#second-quickview').hide(true)
-        $('#p2').attr('style', '')
-    }
-    $(".fifty-before").hover(inMouse, outMouse)
 
 
     //small layout
@@ -58,6 +48,19 @@
 
     //medium layout
     if ($(window).width() >= 768 && $(window).width() <= 980) {
+
+      $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+      $('#first-quickview').hide(true)
+
+      function inMouse() {
+          $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+          $('#p1').attr('style', '-webkit-filter: blur(3px)')
+      }
+      function outMouse() {
+          $('#first-quickview').hide(true)
+          $('#p1').attr('style', '')
+      }
+      $("#photo-first").hover(inMouse, outMouse)
 
       $('#second-span').attr('style', 'z-index: 50; position: absolute;')
       $('#second-span').hide(true)
@@ -97,6 +100,16 @@
 
     if ($(window).width() > 980) {
 
+      function inMouse() {
+          $('#second-quickview').attr('style', 'z-index: 50; position: absolute;')
+          $('#p2').attr('style', '-webkit-filter: blur(3px)')
+      }
+      function outMouse() {
+          $('#second-quickview').hide(true)
+          $('#p2').attr('style', '')
+      }
+      $(".fifty-before").hover(inMouse, outMouse)
+
       $('#first-span').hide(true)
 
       $('#medium-bottom-large').removeClass('medium-bottom-large')
@@ -106,6 +119,8 @@
 
 
     $(window).resize((event) => {
+
+      console.log('resize event fired')
 
       //small layout
       if ($(window).width() < 768) {
@@ -143,6 +158,22 @@
 
       //medium layout
       if ($(window).width() >= 768 && $(window).width() <= 980) {
+
+        $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+        $('#first-quickview').hide(true)
+
+        function inMouse() {
+            $('#first-quickview').attr('style', 'z-index: 50; position: absolute;')
+            $('#p1').attr('style', '-webkit-filter: blur(3px)')
+        }
+        function outMouse() {
+            $('#first-quickview').hide(true)
+            $('#p1').attr('style', '')
+        }
+        $("#photo-first").hover(inMouse, outMouse)
+
+        $(".fifty-before").unbind("")
+
         $('#second-span').attr('style', 'z-index: 50; position: absolute;')
         $('#second-span').hide(true)
 
@@ -155,6 +186,20 @@
       }
 
       if ($(window).width() > 980) {
+
+        $('#photo-first').unbind('')
+        $('#first-quickview').hide(true)
+
+        function inMouse() {
+            $('#second-quickview').attr('style', 'z-index: 50; position: absolute;')
+            $('#p2').attr('style', '-webkit-filter: blur(3px)')
+        }
+        function outMouse() {
+            $('#second-quickview').hide(true)
+            $('#p2').attr('style', '')
+        }
+        $(".fifty-before").hover(inMouse, outMouse)
+
         $('#second-span').attr('style', 'z-index: 50; position: absolute;')
 
         $('#first-span').attr('style', 'z-index: 50; position: absolute;')
@@ -163,6 +208,7 @@
 
         $('#medium-bottom-large').removeClass('medium-bottom-large')
         $('.fifty-img-before').attr('style', 'none')
+        $('#photo-first').removeClass('photo-first')
       }
 
 
