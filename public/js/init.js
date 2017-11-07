@@ -80,6 +80,7 @@
 
       $('#medium-bottom-large').addClass('medium-bottom-large')
       // left image
+      console.log('hey hey hey')
       $('#p2').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
       $('#p1').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
 
@@ -128,6 +129,9 @@
       $('#medium-bottom-large').removeClass('medium-bottom-large')
       $('.fifty-img-before').attr('style', 'none')
       $('#photo-first').removeClass('photo-first')
+
+      $('#p1').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
+      $('#p2').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
     }
 
 
@@ -195,9 +199,17 @@
         $(".medium-bottom-large").css("max-height", $(".fifty-img-before").height());
         $('#medium-bottom-large').addClass('medium-bottom-large')
         $('.fifty-img-before').attr('style', 'margin-left: -100px;')
+
       }
 
       if ($(window).width() > 980) {
+
+        $('#p2').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
+        $('#p1').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
+
+        console.log('large NIGGER')
+
+        switched = true
 
         $('#photo-first').unbind('')
         $('#first-quickview').hide(true)
@@ -221,6 +233,7 @@
         $('#medium-bottom-large').removeClass('medium-bottom-large')
         $('.fifty-img-before').attr('style', 'none')
         $('#photo-first').removeClass('photo-first')
+
       }
 
 
@@ -275,7 +288,7 @@
         $('.fifty-right-img-before').addClass('photo2-real')
       }
       if ($(window).width() >= 981 && switched == true) {
-        console.log('test yo')
+        console.log('test yo 1')
         //switch images
         //photo 1
         let p1src = $('#p1').attr('src')
@@ -288,7 +301,7 @@
         switched = false
       }
       if ($(window).width() <= 980 && switched == false) {
-        console.log('test yo')
+        console.log('test yo 2')
         //switch images
         //photo 1
         let p1src = $('#p1').attr('src')
@@ -308,6 +321,7 @@
       $(".photo2").css("max-height", $(".photo1").height());
 
       if ($(window).width() >= 768 && $(window).width() <= 980) {
+        console.log('test yo 3')
         // left image
         $('#p2').attr('src', 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4')
         $('#p1').attr('src', 'https://i.imgur.com/4IiKnhF.jpg')
